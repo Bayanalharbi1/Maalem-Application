@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".influencer.CreateFragment">
+
+    <ImageView
+        android:id="@+id/img_upload_post"
+        android:layout_width="96dp"
+        android:layout_height="96dp"
+        android:layout_gravity="center"
+        android:layout_margin="5dp"
+        android:src="@drawable/image_gallery"
+        app:layout_constraintBottom_toTopOf="@+id/uploadTxt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+
+    <TextView
+        android:id="@+id/uploadTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="5dp"
+        android:text="@string/upload_post_txt"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/place_name"
+        app:layout_constraintEnd_toEndOf="@+id/img_upload_post"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/img_upload_post"
+        app:layout_constraintTop_toBottomOf="@+id/img_upload_post" />
+
+    <EditText
+        android:id="@+id/place_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:background="@drawable/input"
+        android:hint="@string/place_name"
+        android:inputType="text"
+        android:padding="10dp"
+        android:textAlignment="viewStart"
+
+        app:layout_constraintBottom_toTopOf="@+id/place_desc"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/uploadTxt"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+
+    <EditText
+        android:id="@+id/place_desc"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:background="@drawable/input"
+        android:hint="@string/description"
+        android:maxLines="6"
+        android:padding="10dp"
+        android:inputType="text"
+        android:textAlignment="viewStart"
+
+        android:scrollIndicators="start"
+        app:layout_constraintBottom_toTopOf="@+id/place_location"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/place_name" />
+
+    <EditText
+        android:id="@+id/place_location"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:background="@drawable/input"
+        android:hint="@string/city_or_location"
+        android:maxLines="6"
+        android:padding="10dp"
+        android:inputType="text"
+        android:scrollIndicators="start"
+        android:textAlignment="viewStart"
+
+        app:layout_constraintBottom_toTopOf="@+id/createPlace_progress"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/place_desc" />
+
+
+    <ProgressBar
+        android:id="@+id/createPlace_progress"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_gravity="center"
+        android:layout_margin="5dp"
+
+        android:indeterminateTint="@color/main_color"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/createPlaceBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/place_location"
+        tools:visibility="invisible" />
+
+    <Button
+        android:id="@+id/createPlaceBtn"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/createPlace_progress"
+        android:layout_gravity="bottom"
+        android:layout_margin="16dp"
+        android:background="@drawable/login_btn"
+        android:text="@string/create_post_btn"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/createPlace_progress" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

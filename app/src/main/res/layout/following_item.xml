@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="horizontal"
+    android:layout_margin="10dp"
+
+    android:layout_height="wrap_content">
+
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/input_circle"
+        android:padding="10dp"
+        >
+
+        <com.mikhaellopez.circularimageview.CircularImageView
+            android:id="@+id/following_user_side_img"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_person"
+            />
+
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/following_user_side"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="@string/user_name_edt"
+        android:textColor="@color/black"
+        android:layout_marginEnd="5dp"
+        android:layout_marginStart="5dp"
+        android:textSize="13sp" />
+    <TextView
+        android:layout_marginEnd="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="@string/posted_vlog"
+        />
+
+    <TextView
+        android:id="@+id/following_location_user_side"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_toEndOf="@+id/ic1"
+
+
+
+        android:text="@string/location"
+        android:textSize="13sp" />
+</LinearLayout>

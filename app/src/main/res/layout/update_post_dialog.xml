@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/views_background"
+  android:padding="10dp"
+    android:layout_margin="2dp"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:text="@string/update_post_details"
+        android:textColor="@color/black"
+        android:layout_gravity="center"
+        android:textSize="20dp"
+        />
+
+
+
+    <EditText
+        android:id="@+id/update_place_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:background="@drawable/input"
+        android:hint="@string/place_name"
+        android:inputType="text"
+        android:padding="10dp"
+        android:textAlignment="viewStart"
+
+        />
+
+
+    <EditText
+        android:id="@+id/update_place_desc"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:background="@drawable/input"
+        android:hint="@string/description"
+        android:inputType="text"
+        android:maxLines="6"
+        android:padding="10dp"
+        android:scrollIndicators="start"
+
+        android:textAlignment="viewStart" />
+
+    <EditText
+        android:id="@+id/update_place_location"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:background="@drawable/input"
+        android:hint="@string/city_or_location"
+        android:inputType="text"
+        android:maxLines="6"
+        android:padding="10dp"
+        android:scrollIndicators="start"
+        android:textAlignment="viewStart"
+
+        />
+
+
+    <ProgressBar
+        android:id="@+id/update_createPlace_progress"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_gravity="center"
+        android:layout_margin="5dp"
+
+        android:indeterminateTint="@color/main_color"
+        android:visibility="invisible"
+
+        tools:visibility="invisible" />
+
+    <Button
+        android:id="@+id/update_createPlaceBtn"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/createPlace_progress"
+        android:layout_gravity="bottom"
+        android:layout_margin="8dp"
+        android:text="@string/update_post"
+        android:textColor="@color/white" />
+
+    <Button
+        android:id="@+id/update_cancelPlaceBtn"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/createPlace_progress"
+        android:layout_gravity="bottom"
+        android:layout_margin="8dp"
+        android:backgroundTint="@color/darkgray"
+        android:text="@string/cancel"
+        android:textColor="@color/white" />
+
+</LinearLayout>
